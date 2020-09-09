@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ChatRoomViewController.swift
 //  LineClone
 //
 //  Created by Jh's Macbook Pro on 2020/09/08.
@@ -8,13 +8,13 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ChatRoomViewController: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+        tableView.backgroundColor = .green
     }
 
-
 }
-
