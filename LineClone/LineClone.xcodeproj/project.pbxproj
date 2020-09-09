@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A33CA2C82509266600E78FB3 /* ChatRoomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A33CA2C72509266600E78FB3 /* ChatRoomTableViewCell.xib */; };
+		A33CA2CA25092A5200E78FB3 /* ChatRoomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33CA2C925092A5200E78FB3 /* ChatRoomTableViewCell.swift */; };
 		A373231A2507C319004C9EDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37323192507C319004C9EDA /* AppDelegate.swift */; };
 		A373231C2507C319004C9EDA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A373231B2507C319004C9EDA /* SceneDelegate.swift */; };
 		A37323232507C31A004C9EDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A37323222507C31A004C9EDA /* Assets.xcassets */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A33CA2C72509266600E78FB3 /* ChatRoomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatRoomTableViewCell.xib; sourceTree = "<group>"; };
+		A33CA2C925092A5200E78FB3 /* ChatRoomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomTableViewCell.swift; sourceTree = "<group>"; };
 		A37323162507C319004C9EDA /* LineClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LineClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A37323192507C319004C9EDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A373231B2507C319004C9EDA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +49,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A33CA2C62509265000E78FB3 /* xib */ = {
+			isa = PBXGroup;
+			children = (
+				A33CA2C72509266600E78FB3 /* ChatRoomTableViewCell.xib */,
+			);
+			path = xib;
+			sourceTree = "<group>";
+		};
 		A373230D2507C319004C9EDA = {
 			isa = PBXGroup;
 			children = (
@@ -98,7 +110,9 @@
 		A37323372507CA13004C9EDA /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				A33CA2C62509265000E78FB3 /* xib */,
 				A37323382507CA34004C9EDA /* ChatListTableViewCell.swift */,
+				A33CA2C925092A5200E78FB3 /* ChatRoomTableViewCell.swift */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -169,6 +183,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A33CA2C82509266600E78FB3 /* ChatRoomTableViewCell.xib in Resources */,
 				A37323262507C31A004C9EDA /* LaunchScreen.storyboard in Resources */,
 				A37323232507C31A004C9EDA /* Assets.xcassets in Resources */,
 				A37323302507C538004C9EDA /* ChatList.storyboard in Resources */,
@@ -183,6 +198,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A33CA2CA25092A5200E78FB3 /* ChatRoomTableViewCell.swift in Sources */,
 				A373231A2507C319004C9EDA /* AppDelegate.swift in Sources */,
 				A37323392507CA34004C9EDA /* ChatListTableViewCell.swift in Sources */,
 				A37323322507C59C004C9EDA /* ChatListViewController.swift in Sources */,
