@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChatInputAccessoryView" customModule="LineClone" customModuleProvider="target">
+            <connections>
+                <outlet property="chatTextView" destination="0pT-d6-rFp" id="QUz-ly-pe1"/>
+                <outlet property="sendBtn" destination="0xb-Ho-p3I" id="OOp-l3-MEi"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="683" height="239"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" text="메세지를 입력합니다" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0pT-d6-rFp">
+                    <rect key="frame" x="10" y="10" width="613" height="219"/>
+                    <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0xb-Ho-p3I">
+                    <rect key="frame" x="633" y="99.5" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="KLM-T5-UJA"/>
+                        <constraint firstAttribute="width" constant="40" id="nKu-Ji-8Ph"/>
+                    </constraints>
+                    <state key="normal" title="Button" image="send"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="0pT-d6-rFp" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="69l-Cu-K14"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="0pT-d6-rFp" secondAttribute="bottom" constant="10" id="8n9-8a-SGL"/>
+                <constraint firstItem="0xb-Ho-p3I" firstAttribute="leading" secondItem="0pT-d6-rFp" secondAttribute="trailing" constant="10" id="W2Q-Pl-gg4"/>
+                <constraint firstItem="0xb-Ho-p3I" firstAttribute="centerY" secondItem="0pT-d6-rFp" secondAttribute="centerY" id="cgi-HX-1vN"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="0xb-Ho-p3I" secondAttribute="trailing" constant="10" id="l62-7f-b45"/>
+                <constraint firstItem="0pT-d6-rFp" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="sXw-63-JHt"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="-716" y="74.212893553223395"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="send" width="112.5" height="112.5"/>
+    </resources>
+</document>

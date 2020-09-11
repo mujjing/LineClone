@@ -11,6 +11,13 @@ import UIKit
 class ChatRoomViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    
+    private var chatInputAccessoryView : ChatInputAccessoryView = {
+       let view = ChatInputAccessoryView()
+        view.frame = .init(x: 0, y: 0, width: view.frame.width, height: 80)
+        return view
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,6 +27,15 @@ class ChatRoomViewController: UIViewController {
         //tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         tableView.register(UINib(nibName: "ChatRoomTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
         tableView.backgroundColor = .rgb(red: 118, green: 140, blue: 180)
+    }
+    
+    override var inputAccessoryView: UIView?{
+        get{
+            return chatInputAccessoryView
+        }
+    }
+    override var canBecomeFirstResponder: Bool{
+        return true
     }
 
 }
