@@ -10,9 +10,20 @@ import UIKit
 
 class ChatRoomTableViewCell: UITableViewCell {
 
+    var messageText: String? {
+        didSet{
+            guard let text = messageText else {return}
+            
+            let width = estimateFrameForTextView(text: text).width + 20
+            messageTextViewWidthConstraint.constant = width
+            messageTextView.text = text
+        }
+    }
+    
     @IBOutlet weak var roomImg: UIImageView!
     @IBOutlet weak var messageTextView: UITextView!
     @IBOutlet weak var timeLbl: UILabel!
+    @IBOutlet weak var messageTextViewWidthConstraint: NSLayoutConstraint!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -27,4 +38,9 @@ class ChatRoomTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    private func estimateFrameForTextView(text : String) -> CGRect{
+        let size = CGSize(width: 200, height: 1000)
+        let opetions = NSStringDrawingOptions.usesFontLeading.union(.usesLineFragmentOrigin)
+        return NSString(string: text).boundingRect(with: size, options: opetions, attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 14)], context: nil)
+    }
 }

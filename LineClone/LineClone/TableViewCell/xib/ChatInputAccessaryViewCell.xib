@@ -23,7 +23,7 @@
                     <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
                     <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    <textInputTraits key="textInputTraits"/>
                 </textView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0xb-Ho-p3I">
                     <rect key="frame" x="633" y="99.5" width="40" height="40"/>
@@ -32,6 +32,9 @@
                         <constraint firstAttribute="width" constant="40" id="nKu-Ji-8Ph"/>
                     </constraints>
                     <state key="normal" title="Button" image="send"/>
+                    <connections>
+                        <action selector="tappedSendBtn:" destination="-1" eventType="touchUpInside" id="955-0E-WgS"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
