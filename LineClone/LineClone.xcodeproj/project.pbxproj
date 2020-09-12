@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A31EE62A250BE8740016BC5E /* ChatInputAccessaryViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A31EE629250BE8740016BC5E /* ChatInputAccessaryViewCell.xib */; };
 		A31EE62C250BEA080016BC5E /* ChatInputAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31EE62B250BEA080016BC5E /* ChatInputAccessoryView.swift */; };
+		A31EE62E250C919F0016BC5E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A31EE62D250C919F0016BC5E /* GoogleService-Info.plist */; };
 		A33CA2C82509266600E78FB3 /* ChatRoomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A33CA2C72509266600E78FB3 /* ChatRoomTableViewCell.xib */; };
 		A33CA2CA25092A5200E78FB3 /* ChatRoomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33CA2C925092A5200E78FB3 /* ChatRoomTableViewCell.swift */; };
 		A373231A2507C319004C9EDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37323192507C319004C9EDA /* AppDelegate.swift */; };
@@ -21,11 +22,14 @@
 		A373233C2507CE19004C9EDA /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A373233B2507CE19004C9EDA /* UIColor.swift */; };
 		A373233E2507D2A3004C9EDA /* ChatRoom.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A373233D2507D2A3004C9EDA /* ChatRoom.storyboard */; };
 		A37323402507D2FD004C9EDA /* ChatRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A373233F2507D2FD004C9EDA /* ChatRoomViewController.swift */; };
+		A6659FB982F210C47AE3B708 /* Pods_LineClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F6C9489118886C5A375280 /* Pods_LineClone.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1BF74F61029C92EE1F3C4B61 /* Pods-LineClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LineClone.debug.xcconfig"; path = "Target Support Files/Pods-LineClone/Pods-LineClone.debug.xcconfig"; sourceTree = "<group>"; };
 		A31EE629250BE8740016BC5E /* ChatInputAccessaryViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatInputAccessaryViewCell.xib; sourceTree = "<group>"; };
 		A31EE62B250BEA080016BC5E /* ChatInputAccessoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatInputAccessoryView.swift; sourceTree = "<group>"; };
+		A31EE62D250C919F0016BC5E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A33CA2C72509266600E78FB3 /* ChatRoomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatRoomTableViewCell.xib; sourceTree = "<group>"; };
 		A33CA2C925092A5200E78FB3 /* ChatRoomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomTableViewCell.swift; sourceTree = "<group>"; };
 		A37323162507C319004C9EDA /* LineClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LineClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,6 +44,8 @@
 		A373233B2507CE19004C9EDA /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		A373233D2507D2A3004C9EDA /* ChatRoom.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChatRoom.storyboard; sourceTree = "<group>"; };
 		A373233F2507D2FD004C9EDA /* ChatRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomViewController.swift; sourceTree = "<group>"; };
+		D0F6C9489118886C5A375280 /* Pods_LineClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LineClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBBB5EFBC407D15B3BB379C0 /* Pods-LineClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LineClone.release.xcconfig"; path = "Target Support Files/Pods-LineClone/Pods-LineClone.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,12 +53,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6659FB982F210C47AE3B708 /* Pods_LineClone.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7C1B184F811F370B3BE736C5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1BF74F61029C92EE1F3C4B61 /* Pods-LineClone.debug.xcconfig */,
+				DBBB5EFBC407D15B3BB379C0 /* Pods-LineClone.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		A33CA2C62509265000E78FB3 /* xib */ = {
 			isa = PBXGroup;
 			children = (
@@ -67,6 +84,8 @@
 			children = (
 				A37323182507C319004C9EDA /* LineClone */,
 				A37323172507C319004C9EDA /* Products */,
+				7C1B184F811F370B3BE736C5 /* Pods */,
+				BD0E487FDD05B53E303DB65D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,6 +109,7 @@
 				A37323222507C31A004C9EDA /* Assets.xcassets */,
 				A37323242507C31A004C9EDA /* LaunchScreen.storyboard */,
 				A37323272507C31A004C9EDA /* Info.plist */,
+				A31EE62D250C919F0016BC5E /* GoogleService-Info.plist */,
 			);
 			path = LineClone;
 			sourceTree = "<group>";
@@ -131,6 +151,14 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		BD0E487FDD05B53E303DB65D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D0F6C9489118886C5A375280 /* Pods_LineClone.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,9 +166,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A373232A2507C31A004C9EDA /* Build configuration list for PBXNativeTarget "LineClone" */;
 			buildPhases = (
+				A0D3A47C62C32E27BC0480CB /* [CP] Check Pods Manifest.lock */,
 				A37323122507C319004C9EDA /* Sources */,
 				A37323132507C319004C9EDA /* Frameworks */,
 				A37323142507C319004C9EDA /* Resources */,
+				B3716278EB8993DE785DCC81 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -192,6 +222,7 @@
 				A33CA2C82509266600E78FB3 /* ChatRoomTableViewCell.xib in Resources */,
 				A37323262507C31A004C9EDA /* LaunchScreen.storyboard in Resources */,
 				A31EE62A250BE8740016BC5E /* ChatInputAccessaryViewCell.xib in Resources */,
+				A31EE62E250C919F0016BC5E /* GoogleService-Info.plist in Resources */,
 				A37323232507C31A004C9EDA /* Assets.xcassets in Resources */,
 				A37323302507C538004C9EDA /* ChatList.storyboard in Resources */,
 				A373233E2507D2A3004C9EDA /* ChatRoom.storyboard in Resources */,
@@ -199,6 +230,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A0D3A47C62C32E27BC0480CB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LineClone-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B3716278EB8993DE785DCC81 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LineClone/Pods-LineClone-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LineClone/Pods-LineClone-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LineClone/Pods-LineClone-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A37323122507C319004C9EDA /* Sources */ = {
@@ -346,6 +419,7 @@
 		};
 		A373232B2507C31A004C9EDA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BF74F61029C92EE1F3C4B61 /* Pods-LineClone.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -364,6 +438,7 @@
 		};
 		A373232C2507C31A004C9EDA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DBBB5EFBC407D15B3BB379C0 /* Pods-LineClone.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

@@ -18,7 +18,7 @@
             <rect key="frame" x="0.0" y="0.0" width="683" height="239"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" text="메세지를 입력합니다" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0pT-d6-rFp">
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" text="메세지를 입력합니다" translatesAutoresizingMaskIntoConstraints="NO" id="0pT-d6-rFp">
                     <rect key="frame" x="10" y="10" width="613" height="219"/>
                     <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
                     <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
