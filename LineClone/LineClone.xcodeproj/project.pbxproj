@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -22,6 +22,8 @@
 		A373233C2507CE19004C9EDA /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A373233B2507CE19004C9EDA /* UIColor.swift */; };
 		A373233E2507D2A3004C9EDA /* ChatRoom.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A373233D2507D2A3004C9EDA /* ChatRoom.storyboard */; };
 		A37323402507D2FD004C9EDA /* ChatRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A373233F2507D2FD004C9EDA /* ChatRoomViewController.swift */; };
+		A3D03829250E797A00A10062 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3D03828250E797A00A10062 /* SignUp.storyboard */; };
+		A3D0382B250E7F0A00A10062 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D0382A250E7F0A00A10062 /* SignUpViewController.swift */; };
 		A6659FB982F210C47AE3B708 /* Pods_LineClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F6C9489118886C5A375280 /* Pods_LineClone.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +46,8 @@
 		A373233B2507CE19004C9EDA /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		A373233D2507D2A3004C9EDA /* ChatRoom.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChatRoom.storyboard; sourceTree = "<group>"; };
 		A373233F2507D2FD004C9EDA /* ChatRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomViewController.swift; sourceTree = "<group>"; };
+		A3D03828250E797A00A10062 /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
+		A3D0382A250E7F0A00A10062 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		D0F6C9489118886C5A375280 /* Pods_LineClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LineClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBBB5EFBC407D15B3BB379C0 /* Pods-LineClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LineClone.release.xcconfig"; path = "Target Support Files/Pods-LineClone/Pods-LineClone.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -66,7 +70,6 @@
 				1BF74F61029C92EE1F3C4B61 /* Pods-LineClone.debug.xcconfig */,
 				DBBB5EFBC407D15B3BB379C0 /* Pods-LineClone.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -119,6 +122,7 @@
 			children = (
 				A373232F2507C538004C9EDA /* ChatList.storyboard */,
 				A373233D2507D2A3004C9EDA /* ChatRoom.storyboard */,
+				A3D03828250E797A00A10062 /* SignUp.storyboard */,
 			);
 			path = StoryBoard;
 			sourceTree = "<group>";
@@ -128,6 +132,7 @@
 			children = (
 				A37323312507C59C004C9EDA /* ChatListViewController.swift */,
 				A373233F2507D2FD004C9EDA /* ChatRoomViewController.swift */,
+				A3D0382A250E7F0A00A10062 /* SignUpViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -225,6 +230,7 @@
 				A31EE62E250C919F0016BC5E /* GoogleService-Info.plist in Resources */,
 				A37323232507C31A004C9EDA /* Assets.xcassets in Resources */,
 				A37323302507C538004C9EDA /* ChatList.storyboard in Resources */,
+				A3D03829250E797A00A10062 /* SignUp.storyboard in Resources */,
 				A373233E2507D2A3004C9EDA /* ChatRoom.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,6 +290,7 @@
 				A37323322507C59C004C9EDA /* ChatListViewController.swift in Sources */,
 				A373231C2507C319004C9EDA /* SceneDelegate.swift in Sources */,
 				A373233C2507CE19004C9EDA /* UIColor.swift in Sources */,
+				A3D0382B250E7F0A00A10062 /* SignUpViewController.swift in Sources */,
 				A31EE62C250BEA080016BC5E /* ChatInputAccessoryView.swift in Sources */,
 				A37323402507D2FD004C9EDA /* ChatRoomViewController.swift in Sources */,
 			);
