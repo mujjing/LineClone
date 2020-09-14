@@ -21,6 +21,10 @@ class ChatListViewController: UIViewController {
         navigationController?.navigationBar.barTintColor = .rgb(red: 39, green: 49, blue: 69)
         navigationItem.title = "talk"
         navigationController?.navigationBar.titleTextAttributes = [.foregroundColor : UIColor.white]
+        
+        let sb = UIStoryboard(name: "SignUp", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "SignUpViewController") as! SignUpViewController
+        self.present(vc, animated: true, completion: nil)
     }
 }
 
