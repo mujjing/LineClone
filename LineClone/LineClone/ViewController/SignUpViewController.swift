@@ -12,7 +12,7 @@ import FirebaseFirestore
 import FirebaseAuth
 
 class SignUpViewController: UIViewController {
-
+    
     @IBOutlet weak var profileImageBtn: UIButton!
     @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
@@ -23,7 +23,7 @@ class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         profileImageBtn.layer.cornerRadius = profileImageBtn.frame.height / 2
         profileImageBtn.layer.borderWidth = 1
         profileImageBtn.layer.borderColor = UIColor.rgb(red: 240, green: 240, blue: 240).cgColor
@@ -38,9 +38,34 @@ class SignUpViewController: UIViewController {
     }
     
     @objc func tappedRegisterButton(){
+        guard let image = profileImageBtn.imageView?.image else { return }
+        guard let uploadImage = image.jpegData(compressionQuality: 0.3) else { return }
+        
+        let fileName = NSUUID().uuidString
+        let storageRef = Storage.storage().reference().child("profile_image").child(fileName)
+        storageRef.putData(uploadImage, metadata: nil){ (metadata, err) in
+            if let err = err {
+                print("FireStorage로의 저장에 실패 했습니다 : \(err)")
+                return
+            }
+            print("storage에 저장하였습니다.")
+            storageRef.downloadURL { (url, err) in
+                if let err = err{
+                    print("firebase로 부터 다운로드에 실패하였습니다.:\(err)")
+                    return
+                }
+                guard let urlString = url?.absoluteString else { return }
+                print("urlString : \(urlString)")
+                self.createUserToFirestore(profileImageUrl: urlString)
+            }
+        }
+    }
+    
+    private func createUserToFirestore(profileImageUrl : String) {
         guard let email = emailTF.text else {return}
         guard let password = passwordTF.text else {return}
         
+        //회원가입
         Auth.auth().createUser(withEmail: email, password: password) { (response, error) in
             if let error = error{
                 print("가입에 실패했습니다 : \(error)")
@@ -54,8 +79,9 @@ class SignUpViewController: UIViewController {
             let docData = [
                 "email" : email,
                 "username" : username,
-                "createdAt" : Timestamp()
-            ] as [String : Any]
+                "createdAt" : Timestamp(),
+                "profileImageUrl" : profileImageUrl
+                ] as [String : Any]
             Firestore.firestore().collection("users").document(uid).setData(docData){
                 (err) in
                 
@@ -70,7 +96,7 @@ class SignUpViewController: UIViewController {
             }
         }
     }
-
+    
     @objc func tappedProfileImageButton(){
         let imagePickerController = UIImagePickerController()
         imagePickerController.delegate = self

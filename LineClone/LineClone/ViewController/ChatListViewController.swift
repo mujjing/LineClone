@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import Firebase
 
 class ChatListViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    private var users = [User]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,9 +24,39 @@ class ChatListViewController: UIViewController {
         navigationItem.title = "talk"
         navigationController?.navigationBar.titleTextAttributes = [.foregroundColor : UIColor.white]
         
-        let sb = UIStoryboard(name: "SignUp", bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: "SignUpViewController") as! SignUpViewController
-        self.present(vc, animated: true, completion: nil)
+        if Auth.auth().currentUser?.uid == nil {
+            let sb = UIStoryboard(name: "SignUp", bundle: nil)
+            let vc = sb.instantiateViewController(withIdentifier: "SignUpViewController") as! SignUpViewController
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true, completion: nil)
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        fetchUserInfoFromFirebase()
+    }
+    
+    private func fetchUserInfoFromFirebase(){
+        Firestore.firestore().collection("users").getDocuments { (snapshots, err) in
+            if let err = err {
+                print("user정보취득에 실패하셨습니다 : \(err)")
+                return
+            }
+            snapshots?.documents.forEach({ (snapshot) in
+                let dic = snapshot.data()
+                let user = User.init(dic: dic)
+                
+                self.users.append(user)
+                self.tableView.reloadData()
+                self.users.forEach { (user) in
+                    print("user.username: \(user.username)")
+                }
+                
+                print("data : \(dic)")
+            })
+        }
     }
 }
 
@@ -34,11 +66,12 @@ extension ChatListViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return users.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ChatListTableViewCell
+        cell.user = users[indexPath.row]
         
         return cell
     }
