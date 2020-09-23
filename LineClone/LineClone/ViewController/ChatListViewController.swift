@@ -27,15 +27,26 @@ class ChatListViewController: UIViewController {
         if Auth.auth().currentUser?.uid == nil {
             let sb = UIStoryboard(name: "SignUp", bundle: nil)
             let vc = sb.instantiateViewController(withIdentifier: "SignUpViewController") as! SignUpViewController
-            vc.modalPresentationStyle = .fullScreen
+            //vc.modalPresentationStyle = .fullScreen
             self.present(vc, animated: true, completion: nil)
         }
+        
+        let rightButton = UIBarButtonItem(title: "새로운채팅", style: .plain, target: self, action: #selector(tappedNavigationRightButton))
+        navigationItem.rightBarButtonItem = rightButton
+        navigationItem.rightBarButtonItem?.tintColor = .white
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         fetchUserInfoFromFirebase()
+    }
+    @objc func tappedNavigationRightButton() {
+        print("새로운 채팅")
+        let sb = UIStoryboard(name: "UserList", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "UserListViewController") as! UserListViewController
+        let nav = UINavigationController(rootViewController: vc)
+        present(nav, animated: true)
     }
     
     private func fetchUserInfoFromFirebase(){
